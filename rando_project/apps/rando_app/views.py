@@ -11,6 +11,6 @@ def index(request):
 
 def reset(request):
     print 'this route works!'
-    request.session['counter'] = 0
+    request.session['counter'] = -1
     # return redirect(request, '/random_word/reset') doesn't work!!
-    return render(request, 'rando_app/index.html')
+    return redirect('/')
